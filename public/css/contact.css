@@ -1,0 +1,75 @@
+.contactTitle {
+
+    font-weight: 900;
+    font-size: 30px;
+
+}
+
+.containerTitle {
+
+    border-bottom: 1px solid black;
+
+}
+
+.fileInput {
+
+    width: 250px !important;
+ margin-top: 3em;
+}
+
+
+.containerInput1 {
+
+    display: flex;
+    gap: 2em;
+    border-bottom: 2px solid black;
+    padding-bottom: 1em;
+}
+
+
+.containerInput2 {
+
+    display: flex;
+    gap: 2em;
+   
+}
+
+.containerInput3 {
+
+    display: flex;
+    gap: 2em;
+    margin: 1em 0 3em 0;
+    border-bottom: 2px solid black;
+    padding-bottom: 5em;
+   
+}
+
+
+.inputStyle {
+
+    height: 40px;
+    position: relative;
+    top: 2.7em;
+    border-radius: 5px !important;
+
+}
+
+.containerButton {
+
+    float: right;
+
+}
+
+.buttonStyle {
+
+    width: 300px;
+
+}
+
+.alertStyle {
+
+    text-align: center;
+    color: green;
+    font-weight: 900;
+
+}

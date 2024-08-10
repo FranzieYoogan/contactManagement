@@ -1,0 +1,27 @@
+.contactIcon {
+
+    width: 30px;
+    background-color: white;
+}
+
+.containerTitle {
+
+
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.contactTitle {
+
+    font-weight: 900;
+    font-size: 25px;
+
+}
+
+.tableStyle {
+
+    margin-top: 2em;
+
+}
