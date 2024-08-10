@@ -1,0 +1,16 @@
+.titlePic {
+
+    text-align: center;
+    font-weight: 900;
+    
+
+}
+
+.imageStyle {
+
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 1em;
+    box-shadow: 1px 1px 1px 1px black;
+
+}

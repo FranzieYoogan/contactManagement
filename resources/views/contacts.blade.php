@@ -75,8 +75,16 @@
                     {{$contact->company}}
                 </td>
 
-                <td class="px-6 py-4">
-                    {{$contact->birthDate}}
+                <td class="tdFinal px-6 py-4">
+                    {{$contact->birthDate}} 
+                    <form method="POST" action="/image">
+                    <input type="text" name="id" style="display: none" value="{{$contact->contactID}}">
+                   
+           
+                        @csrf
+                    
+                        <button type="submit"><img class="icons" src="{{asset('/images/eye.png')}}" alt=""></button>
+                </form>
                 </td>
 
             </tr>

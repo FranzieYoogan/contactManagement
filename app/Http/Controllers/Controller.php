@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class Controller
 {
@@ -41,8 +42,8 @@ foreach ($admin as $user) {
     public function addcontacts(Request $request) {
 
         $image = $request->file('image');
-        $image->store('uploads','public');
-
+     $url = Storage::disk('public_uploads')->put('uploads', $image);
+        
         $firstName = $request->input('firstName');
         $lastName = $request->input('lastName');
         $phone = $request->input('phone');
@@ -59,8 +60,9 @@ foreach ($admin as $user) {
             'address' => $address,
             'company' => $company,
             'birthDate' => $date,
-            'image' => $image,
+            'image' => $url,
         ]);
+        
 
         $ok = true;
 
@@ -76,6 +78,17 @@ foreach ($admin as $user) {
 
     }
 
+    public function image(Request $request) {
+
+        $contactId = $request->input('id');
+
+        $image = DB::table('contacts')
+        ->where('contactID', $contactId)
+        ->value('image');  // Fetch single value    
+       
+        return view('image',['image' => $image]);
+
+    }
 
     
 
