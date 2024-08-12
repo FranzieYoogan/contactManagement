@@ -85,6 +85,16 @@
                     
                         <button type="submit"><img class="icons" src="{{asset('/images/eye.png')}}" alt=""></button>
                 </form>
+
+                <form method="POST" action="/delete">
+                   
+                    <input type="text" name="id2" style="display: none" value="{{$contact->contactID}}">
+                   
+           
+                        @csrf
+                    
+                        <button type="submit"><img class="icons" src="{{asset('/images/delete.png')}}" alt=""></button>
+                </form>
                 </td>
 
             </tr>
